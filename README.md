@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your Loc
 git clone www.github.com/kashishshah881/serverless-nlp
 ```
 ### Documentation: 
-For Documentation: 
+For Clat Documentation: [here](https://docs.google.com/document/d/1nqC3kqwIQBxHA7GCg8Wy516HHWqfMBf-7XVf9iy_HM4/edit?usp=sharing)
 
 ### Prerequisites
 
