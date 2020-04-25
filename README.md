@@ -67,7 +67,7 @@ This project has folders that has all the files required for setting up the clou
  
 
 ### Test cases:
-Test cases 
+
 -  
 
 
