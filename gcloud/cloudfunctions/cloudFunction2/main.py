@@ -26,7 +26,7 @@ def hello_pubsub(event,context):
          event (dict): Event payload.
          context (google.cloud.functions.Context): Metadata for the event.
     """
-    project = 'big-data-project-271917'
+    project = <$Enter project id here>
     region = 'us-central1'
     model = 'sentiment_model2'
     version='v_1'
