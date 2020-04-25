@@ -6,35 +6,18 @@ And, If we were under the impression that the mainstream media is unbiased and c
 
 In this project, we aim to present the users an unbiased view on the news around us. We fetch articles from **one or more news sources** and assess the **sentiment of each article presenting a larger picture of the tone of the article** without the need for dwelling deeper into each article for understanding the sentiment.
 
-## Steps
-
-![DataFlow Diagram](https://storage.cloud.google.com/markdownimages/DataFlow.png)
-
-- **Step 1** : 
-User searching for a specific topic and specify the timeframe withing which the results would be presented 
-
-- **Step 2** : 
-Fetching all data within the defined timeframe
-
-- **Step 3** :
-Extracting the streams of data and queue them using a pub/sub environment.
-
-- **Step 4** :
-Cleaning and provessing the data.
-
-- **Step 5** :
-Sending the cleaned data to a machine learning model for predictions.
-
-- **Step 6** :
-Analysing the data and presenting the final analysis 
-
 ## Architecture
 
 
 ## Getting Started
+These instructions will get you a copy of the project up and running on your Local Environment using Cloud Infrastructure 
+```
+git clone www.github.com/kashishshah881/serverless-nlp
+```
 
 ### Prerequisites
 
+- Python3.7
 - GCP Account (Google cloud platform)
 - Docker
 - Streamlit
@@ -45,8 +28,24 @@ This project has folders that has all the files required for setting up the clou
 
 1. For setting up the environment, we need to login to the GCP Console.
 2. Create two Pub/Sub topics. 
-3. Create a BigQuery dataset and a table.
-    schema name: schema type
+3. Create a BigQuery dataset and a table with the schema.Note: *The column names are Case Sensitive*
+| Column Name   | Variable Type |
+| ------------- | ------------- |
+| query         | STRING        |
+| source        | STRING        |
+| category      | STRING        |
+| title         | STRING        |
+| text          | STRING        |
+| Sentiment     | STRING        |
+| Magnitude     | STRING        |
+| Name          | STRING        |
+ 
+ 
+ 
+ 
+ 
+ 
+ schema name: schema type
     query: string
     source : string
     category : string
@@ -77,7 +76,7 @@ Test cases
 
 - Kashish Shah - Design, Architect and Deployment - [Linkedin](https://www.linkedin.com/in/shah-kashish/)
 - Manogana Mantripragada - Machine Learning Engineer - [Linkedin](https://www.linkedin.com/in/manogna-mantripragada/)
-- Dhruv Panchal - Architect and Deployment - [Linkedin](https://www.linkedin.com/in/panchaldhruv/)
+- Dhruv Panchal - Frontend - [Linkedin](https://www.linkedin.com/in/panchaldhruv/)
 
 ## License
 
