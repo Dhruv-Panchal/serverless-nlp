@@ -7,13 +7,15 @@ And, If we were under the impression that the mainstream media is unbiased and c
 In this project, we aim to present the users an unbiased view on the news around us. We fetch articles from **one or more news sources** and assess the **sentiment of each article presenting a larger picture of the tone of the article** without the need for dwelling deeper into each article for understanding the sentiment.
 
 ## Architecture
-
+<img src="https://github.com/kashishshah881/serverless-nlp/blob/master/img/arch.jpeg">
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your Local Environment 
 ```
 git clone www.github.com/kashishshah881/serverless-nlp
 ```
+### Documentation: 
+For Documentation: 
 
 ### Prerequisites
 
@@ -66,16 +68,6 @@ This project has folders that has all the files required for setting up the clou
  13. Deploy the application on Kubernetes. Follow [here](https://codeburst.io/getting-started-with-kubernetes-deploy-a-docker-container-with-kubernetes-in-5-minutes-eb4be0e96370)
  
 
-### Test cases:
-
--  
-
-
-
-### Building and deploying custom ML Models on GCP AI Hub
-
-
-
 ## Built with
 
 - Kashish Shah - Design, Architect and Deployment - [Linkedin](https://www.linkedin.com/in/shah-kashish/)
@@ -87,3 +79,8 @@ This project has folders that has all the files required for setting up the clou
 This project is licensed under the Commons Clause License - see the [LICENSE.md](https://commonsclause.com/) file for details.
 
 ## Acknowledgements
+1. https://imadelhanafi.com/posts/bigquery_dashboard/
+2. https://www.oodlestechnologies.com/blogs/The-importance-of-Test-Case-In-Software-Testing/
+3. https://towardsdatascience.com/game-of-thrones-twitter-sentiment-with-keras-apache-beam-bigquery-and-pubsub-382a770f6583
+4. https://www.edureka.co/blog/test-case-in-software-testing/
+
