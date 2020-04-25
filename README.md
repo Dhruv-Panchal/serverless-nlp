@@ -10,7 +10,7 @@ In this project, we aim to present the users an unbiased view on the news around
 
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your Local Environment using Cloud Infrastructure 
+These instructions will get you a copy of the project up and running on your Local Environment 
 ```
 git clone www.github.com/kashishshah881/serverless-nlp
 ```
@@ -28,9 +28,11 @@ This project has folders that has all the files required for setting up the clou
 
 1. For setting up the environment, we need to login to the GCP Console.
 2. Create two Pub/Sub topics. 
-3. Create a BigQuery dataset and a table with the schema.Note: *The column names are Case Sensitive*
+3. Create a BigQuery dataset and a table with the schema. Note: *The column names are Case Sensitive but the order doesnt matter.*
+
 | Column Name   | Variable Type |
 | ------------- | ------------- |
+| date          | STRING        |
 | query         | STRING        |
 | source        | STRING        |
 | category      | STRING        |
@@ -39,31 +41,33 @@ This project has folders that has all the files required for setting up the clou
 | Sentiment     | STRING        |
 | Magnitude     | STRING        |
 | Name          | STRING        |
+| Organization  | STRING        |
+| Location      | STRING        |
+| Other         | STRING        |
  
+ 4. Change the Pubsub Topic Name [Here](https://github.com/kashishshah881/serverless-nlp/blob/master/gcloud/cloudfunctions/cloudFunction1/main.py#L100) to First Pubsub Topic
  
+ 5. Run ```gcloud functions deploy main_stream --runtime python37 --trigger-http``` on CLI inside the folder
  
+ 6. Change the Pubsub Topic Name [Here](https://github.com/kashishshah881/serverless-nlp/blob/master/gcloud/cloudfunctions/cloudFunction2/main.py#L70) to Second Pubsub Topic
  
+ 7. Run ```gcloud functions deploy hello_pubsub --runtime python37 --trigger-topic <Enter First Topic Name Here>``` on CLI inside the folder
  
+ 8. Setup a Pubsub To Google BigQuery Dataflow Job from [here](https://github.com/kashishshah881/serverless-nlp/blob/master/gcloud/dataflow/pubsubToBigQuery.java#L93) or Follow Steps [here](https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubsubscriptiontobigquery)
  
- schema name: schema type
-    query: string
-    source : string
-    category : string
-    title : 
-    text
-    sentiment
-
-Config Files:
-
-line 100: Guardian-data: 1st Pub/sub
-line 70: Clean-data : 2nd pub/Sub
-Streamlit: line 29: Cloud function 1 url(trigger)
-
-Config foldfer: add credential file key.json
-
+ 9. Setup a Pubsub to Google Datastore Dataflow Job. Follow Steps [here](https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubtogcstext)
+ 
+ 10. Change the url on the frontend [here](https://github.com/kashishshah881/serverless-nlp/blob/master/frontend/main.py#L29)
+ 
+ 11. Create *config/key.json. key.json is the key downloaded from gcloud account. 
+ To Download the file Follow [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
+ 
+ 12. Run ```docker build .``` inside Frontend Folder
+ 13. Deploy the application on Kubernetes. Follow [here](https://codeburst.io/getting-started-with-kubernetes-deploy-a-docker-container-with-kubernetes-in-5-minutes-eb4be0e96370)
+ 
 
 ### Test cases:
-Test cases 
+
 -  
 
 
