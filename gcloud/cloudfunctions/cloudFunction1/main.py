@@ -6,7 +6,7 @@ from google.cloud import pubsub
 import time
 publish_client = pubsub.PublisherClient()
 API_ENDPOINT = 'http://content.guardianapis.com/search'
-MY_API_KEY = '9d65d521-8676-4067-b0d8-c82ab599c38a'
+MY_API_KEY = <$Enter guardian API key here>
 
 #start_date = date(2020, 4, 10)
 #end_date = date(2020,4, 16)
